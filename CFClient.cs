@@ -31,13 +31,13 @@ namespace cursepacker
                                 select file).First();
                 downloadUrl = fobj.downloadUrl;
                 fileName = fobj.fileName;
-                Console.Write("[       found       ] ");
+                Console.Write("[       found       ]");
             }
             catch (InvalidOperationException)
             {
                 if (fix_prefix.Length == 0)
                 {
-                    Console.Write("[     not found     ] ");
+                    Console.Write("[     not found     ]");
                     throw new Exception($"Try search at `{dyn_data.websiteUrl}`");
                 }
 
@@ -56,13 +56,13 @@ namespace cursepacker
                     {
                         downloadUrl = file.downloadUrl;
                         fileName = file.fileName;
-                        Console.Write("[ found  compatible ] ");
+                        Console.Write("[ found  compatible ]");
                         break;
                     }
                 }
                 if (downloadUrl.Length == 0 || fileName.Length == 0)
                 {
-                    Console.Write("[     not found     ] ");
+                    Console.Write("[     not found     ]");
                     throw new Exception($"Try search at `{dyn_data.websiteUrl}`");
                 }
             }
